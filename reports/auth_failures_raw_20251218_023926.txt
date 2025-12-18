@@ -1,0 +1,6 @@
+AUTHENTICATION FAILURE EVIDENCE (RAW)
+Timestamp: 20251218_023926
+
+Source log: /var/log/secure
+
+Failed authentication lines:

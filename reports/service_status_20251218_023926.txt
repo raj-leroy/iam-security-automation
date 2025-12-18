@@ -1,0 +1,38 @@
+IDENTITY-CRITICAL SERVICE STATUS
+Timestamp: 20251218_023926
+
+SSHD Status:
+● sshd.service - OpenSSH server daemon
+     Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2025-12-18 01:55:26 EST; 43min ago
+ Invocation: 8db5b5b4a1b64357acd2385f4be25041
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 1159 (sshd)
+      Tasks: 1 (limit: 35556)
+     Memory: 1.1M (peak: 1.3M)
+        CPU: 25ms
+     CGroup: /system.slice/sshd.service
+             └─1159 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Dec 18 01:55:26 iam-sec.local systemd[1]: Starting sshd.service - OpenSSH server daemon...
+Dec 18 01:55:26 iam-sec.local (sshd)[1159]: sshd.service: Referenced but unset environment variable evaluates to an empty string: OPTIONS
+Dec 18 01:55:26 iam-sec.local sshd[1159]: Server listening on 0.0.0.0 port 22.
+Dec 18 01:55:26 iam-sec.local sshd[1159]: Server listening on :: port 22.
+Dec 18 01:55:26 iam-sec.local systemd[1]: Started sshd.service - OpenSSH server daemon.
+
+Firewall Status:
+● firewalld.service - firewalld - dynamic firewall daemon
+     Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2025-12-18 01:55:26 EST; 44min ago
+ Invocation: 49c3e5202ccb41ae94655724ec428fc9
+       Docs: man:firewalld(1)
+   Main PID: 1075 (firewalld)
+      Tasks: 2 (limit: 35556)
+     Memory: 44.1M (peak: 44.3M)
+        CPU: 607ms
+     CGroup: /system.slice/firewalld.service
+             └─1075 /usr/bin/python3 -sP /usr/sbin/firewalld --nofork --nopid
+
+Dec 18 01:55:25 iam-sec.local systemd[1]: Starting firewalld.service - firewalld - dynamic firewall daemon...
+Dec 18 01:55:26 iam-sec.local systemd[1]: Started firewalld.service - firewalld - dynamic firewall daemon.
